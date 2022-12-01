@@ -23,6 +23,14 @@ namespace CsharpShop2
             this.pezzi = PezziMaxControllo();
         }
 
+
+
+        //getters 
+        public int GetPezzi() { return pezzi; } 
+        public double GetPeso() { return peso; }
+        public int GetMaxPezzi() { return MaxPezzi; }
+        //setters
+
         //Metodo Privati 
         private int PezziMaxControllo()
         {
@@ -32,6 +40,7 @@ namespace CsharpShop2
             }
            return pezzi;
         }
+        
         
 
     }
