@@ -11,14 +11,14 @@ namespace CsharpShop2
     {
         private string nome;
         private string descrizione;
-        private int prezzo;
         private int Codice;
+        private double prezzo;
         private double iva;
 
-        public Prodotto(string nome, string descrizione, int prezzo, double iva)
+        public Prodotto(string nome, string descrizione, double prezzo, double iva)
         {
             Random rnd = new Random();
-            this.Codice = rnd.Next(1, 100);
+            this.Codice = rnd.Next(1, 100000);
             this.nome = nome;
             this.descrizione = descrizione;
             this.prezzo = prezzo;
@@ -38,7 +38,7 @@ namespace CsharpShop2
             return this.descrizione;
         }
 
-        public int GetPrezzo()
+        public double GetPrezzo()
         {
             return this.prezzo;
         }
@@ -103,7 +103,7 @@ namespace CsharpShop2
 
 
         //Metodi pubblici
-        public int PrezzoBase()
+        public double PrezzoBase()
         {
             return prezzo;
         }
