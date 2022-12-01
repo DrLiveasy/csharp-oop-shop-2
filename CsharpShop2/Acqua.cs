@@ -13,9 +13,11 @@ namespace CsharpShop2
         private double litri;
         private double ph;
         private string sorgente;
+
         #endregion
 
-
+        //Stato
+        private double MaxLitri = 1.5;
 
         //Costruttori
         public Acqua(string nome, string descrizione, double prezzo, double iva, double litri, double ph, string sorgente) : base(nome, descrizione, prezzo, iva)
@@ -37,6 +39,10 @@ namespace CsharpShop2
         {
             return sorgente;
         }
+        public double GetMaxLitri()
+        {
+            return MaxLitri;
+        }
 
         //Metodi Pubb
         #region METODI PUBBLICI
@@ -47,9 +53,34 @@ namespace CsharpShop2
                 this.litri -= DaBere;
                 Console.WriteLine("Sono stai bevuti: "+DaBere+" L" + "\nTi mancano: "+ GetLitri() +" L"  );
             }
-            else
+            else {
+            
+            }
             {
                 Console.WriteLine("Mi dispaiace i litri richiesti da bere non ci sono");
+            }
+        }
+        public void RiempieLaBottiglia(double daRiempire)
+        {
+            double LitriRiempiti = litri + daRiempire;
+
+            if (daRiempire <= MaxLitri)
+            {
+                if(LitriRiempiti > MaxLitri)
+                {
+                    litri += MaxLitri;
+                    Console.WriteLine("i litri: "+ litri);
+                }
+                else 
+                {
+                    litri+= LitriRiempiti;
+                    Console.WriteLine("i litri: " + litri);
+                }
+            }
+            else 
+            {
+                Console.WriteLine("Mi dispiace ma la massima quantità da riempere  1.5L");
+
             }
         }
 
