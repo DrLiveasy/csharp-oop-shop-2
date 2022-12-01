@@ -9,6 +9,9 @@ Prodotto Banana = new Prodotto("Banana", "Banana", 0.6, 0.22);
 
 Aqua.StampaDatiProdotto();
 Aqua.litriDaBere(0.5);
+Console.WriteLine("sono disponibili : "+Aqua.GetLitri()+" l");
 Aqua.RiempieLaBottiglia(0.4);
+Console.WriteLine("sono disponibili : " + Aqua.GetLitri() + " l");
 Aqua.RiempieLaBottiglia(15);
+Console.WriteLine("sono disponibili : " + Aqua.GetLitri() + " l");
 
