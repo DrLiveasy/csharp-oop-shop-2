@@ -42,7 +42,15 @@ namespace CsharpShop2
         #region METODI PUBBLICI
         public void litriDaBere(double DaBere)
         {
-            
+            if (litri >= DaBere)
+            {
+                this.litri -= DaBere;
+                Console.WriteLine("Sono stai bevuti: "+DaBere+" L" + "\nTi mancano: "+ GetLitri() +" L"  );
+            }
+            else
+            {
+                Console.WriteLine("Mi dispaiace i litri richiesti da bere non ci sono");
+            }
         }
 
         #endregion
