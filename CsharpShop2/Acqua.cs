@@ -25,6 +25,27 @@ namespace CsharpShop2
             this.ph = ph;
         }
         //Getters
+        public double GetLitri()
+        { 
+            return litri;
+        }
+        public double GetPh()
+        {
+            return ph;
+        }
+        public string GetSorgente()
+        {
+            return sorgente;
+        }
+
+        //Metodi Pubb
+        #region METODI PUBBLICI
+        public void litriDaBere(double DaBere)
+        {
+            
+        }
+
+        #endregion
 
     }
 }
