@@ -7,4 +7,4 @@ Prodotto Aqua = new Prodotto("Acqua", "Acqua Naturale", 0.60, 0.22);
 Prodotto Banana = new Prodotto("Banana", "Banana", 0.6, 0.22);
 
 
-
+Banana.StampaDatiProdotto ();
