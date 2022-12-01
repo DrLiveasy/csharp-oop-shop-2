@@ -83,7 +83,15 @@ namespace CsharpShop2
 
             }
         }
-
+        public void svuota()
+        {
+            litri = 0;  
+        }
+        public override void StampaDatiProdotto()
+        {
+            base.StampaDatiProdotto();
+            Console.WriteLine($"litri : {GetLitri()} \n ph: {GetPh()}\n srogente: {GetSorgente} ");
+        }
         #endregion
 
     }

@@ -119,7 +119,7 @@ namespace CsharpShop2
 
 
 
-        public void StampaDatiProdotto()
+        public virtual void StampaDatiProdotto()
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("-----------------------");
