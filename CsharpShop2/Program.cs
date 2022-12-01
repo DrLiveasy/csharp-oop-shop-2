@@ -3,8 +3,12 @@ using CsharpShop2;
 
 
 Prodotto Carne = new Prodotto("Carne", "Carne di Mucca", 7 , 0.22);
-Prodotto Aqua = new Prodotto("Acqua", "Acqua Naturale", 0.60, 0.22);
+Acqua Aqua = new Acqua("Acqua", "Acqua Naturale", 0.60, 0.22,1.5,2.2, "sant'anna");
 Prodotto Banana = new Prodotto("Banana", "Banana", 0.6, 0.22);
 
 
-Banana.StampaDatiProdotto ();
+Aqua.StampaDatiProdotto();
+Aqua.litriDaBere(0.5);
+Aqua.RiempieLaBottiglia(0.4);
+Aqua.RiempieLaBottiglia(15);
+

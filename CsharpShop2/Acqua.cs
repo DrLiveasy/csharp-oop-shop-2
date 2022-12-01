@@ -20,6 +20,7 @@ namespace CsharpShop2
         private double MaxLitri = 1.5;
 
         //Costruttori
+       
         public Acqua(string nome, string descrizione, double prezzo, double iva, double litri, double ph, string sorgente) : base(nome, descrizione, prezzo, iva)
         {
             this.sorgente = sorgente;
@@ -43,8 +44,7 @@ namespace CsharpShop2
         {
             return MaxLitri;
         }
-
-        //Metodi Pubb
+ 
         #region METODI PUBBLICI
         public void litriDaBere(double DaBere)
         {
@@ -53,9 +53,7 @@ namespace CsharpShop2
                 this.litri -= DaBere;
                 Console.WriteLine("Sono stai bevuti: "+DaBere+" L" + "\nTi mancano: "+ GetLitri() +" L"  );
             }
-            else {
-            
-            }
+            else 
             {
                 Console.WriteLine("Mi dispaiace i litri richiesti da bere non ci sono");
             }
@@ -66,20 +64,17 @@ namespace CsharpShop2
 
             if (daRiempire <= MaxLitri)
             {
-                if(LitriRiempiti > MaxLitri)
-                {
-                    litri += MaxLitri;
-                    Console.WriteLine("i litri: "+ litri);
-                }
-                else 
-                {
-                    litri+= LitriRiempiti;
-                    Console.WriteLine("i litri: " + litri);
-                }
+                
+               litri = MaxLitri;
+               Console.WriteLine("i litri: " + litri);
+
             }
-            else 
+            else if (daRiempire > MaxLitri)
             {
-                Console.WriteLine("Mi dispiace ma la massima quantità da riempere  1.5L");
+           
+               litri = MaxLitri;
+               Console.WriteLine("i litri: " + litri);
+                
 
             }
         }
@@ -90,7 +85,7 @@ namespace CsharpShop2
         public override void StampaDatiProdotto()
         {
             base.StampaDatiProdotto();
-            Console.WriteLine($"litri : {GetLitri()} \n ph: {GetPh()}\n srogente: {GetSorgente} ");
+            Console.WriteLine($"litri : {GetLitri()} \n ph: {GetPh()} % \n srogente: {GetSorgente()} ");
         }
         #endregion
 
